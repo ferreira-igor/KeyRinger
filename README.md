@@ -1,5 +1,6 @@
 # KeyRinger
 
+[![Build](https://github.com/ferreira-igor/KeyRinger/actions/workflows/compile-sketch.yml/badge.svg)](https://github.com/ferreira-igor/KeyRinger/actions/workflows/compile-sketch.yml)
 ![Platform](https://img.shields.io/badge/Platform-ESP8266-blue)
 ![Framework](https://img.shields.io/badge/Framework-Arduino-green)
 
@@ -67,14 +68,15 @@ The code is tested on the **Wemos D1 Mini** but should work on any ESP8266-based
 1. Download the latest binary from the Releases page
 
 2. Install esptool:
-
-         pipx install esptool
+   ```bash
+   pipx install esptool
+   ```
 
 3. Using esptool:
-
-         esptool --port /dev/ttyUSB0 erase-flash
-         esptool --port /dev/ttyUSB0 write-flash 0x0 KeyRinger.ino.merged.bin
-
+   ```bash
+   esptool --port /dev/ttyUSB0 erase-flash
+   esptool --port /dev/ttyUSB0 write-flash 0x0 KeyRinger.ino.bin
+   ```
 
 Replace /dev/ttyUSB0 with your actual serial port.
 
